@@ -1,1 +1,1 @@
-# code-challenges
+# Technical Notes Code Challenges
