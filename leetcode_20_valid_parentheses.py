@@ -9,7 +9,7 @@ class Solution:
         # Iterate over each character in the string
         for char in s:
             # If the character is a closing bracket
-            if char in bracket_map:
+            if char in bracket_map:  # char is the key of the dictionary
                 # Pop the top element from the stack if it's not empty,
                 # otherwise assign a dummy value
                 top_element = stack.pop() if stack else '#'
