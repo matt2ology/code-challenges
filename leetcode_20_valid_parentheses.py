@@ -27,3 +27,18 @@ class Solution:
         return not stack
 
 
+if __name__ == "__main__":
+    # Driver code
+    s = Solution()
+    print("() : " + str(s.isValid("()")))  # True
+    print("()[]{} : " + str(s.isValid("()[]{}")))  # True
+    print("(] : " + str(s.isValid("(]")))  # False
+    print("([)] : " + str(s.isValid("([))]")))  # False
+    print("{[]} : " + str(s.isValid("{[]}")))  # True
+    print("} : " + str(s.isValid("}")))  # False
+    print("[ : " + str(s.isValid("[")))  # False
+    print("] : " + str(s.isValid("]")))  # False
+    print("{{ : " + str(s.isValid("{{")))  # False
+    print("}} : " + str(s.isValid("}}")))  # False
+    print("{{}} : " + str(s.isValid("{{}}")))  # True
+    print("{{}}{} : " + str(s.isValid("{{}}{}")))  # True
