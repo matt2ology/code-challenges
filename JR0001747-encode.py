@@ -89,3 +89,4 @@ if __name__ == "__main__":
     assert isIsomorphic("mom", "dad") is True  # True (121 -> 121)
     assert isIsomorphic("talk", "look") is False  # False (1234 -> 1223)
     assert isIsomorphic("mmo", "dad") is False  # False (112 -> 121)
+    assert isIsomorphic("mama", "moo") is False  # False (1212 -> 122)
