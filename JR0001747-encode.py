@@ -50,6 +50,7 @@ def isIsomorphic(s1: str, s2: str) -> bool:
     Returns:
         bool: True if the strings can be encoded to each other, False otherwise
     """
+    result: bool = False
     if len(s1) == len(s2):  # Check if the strings are of equal length
         s1_dict = {}  # Dictionary to store the characters in s1
         s2_dict = {}  # Dictionary to store the characters in s2
@@ -64,7 +65,8 @@ def isIsomorphic(s1: str, s2: str) -> bool:
             # If the characters are not equal in the dictionary for s1 and s2
             if s1_dict[s1[i]] != s2_dict[s2[i]]:
                 return False  # The strings are not isomorphic
-        return True  # The strings are isomorphic if the loop completes
+        result = True  # The strings are isomorphic
+    return result  # The strings are isomorphic if the loop completes
 
 
 if __name__ == "__main__":
