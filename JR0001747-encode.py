@@ -59,6 +59,7 @@ def isIsomorphic(s1: str, s2: str) -> bool:
             # If the character is not in the dictionary for s1 (s1_dict)
             if s1[i] not in s1_dict:
                 s1_dict[s1[i]] = i  # Add the character to the dictionary
+                print("s1: ", s1[i], " -> ", i)
             # If the character is not in the dictionary for s2 (s2_dict)
             if s2[i] not in s2_dict:
                 s2_dict[s2[i]] = i  # Add the character to the dictionary
@@ -73,11 +74,11 @@ if __name__ == "__main__":
     print("===============================================")
     print("MY ATTEMPT")
     print("===============================================")
-    print("cat ->", "dog: ", foo("cat", "dog"))    # True (123 -> 123)
-    print("mom ->", "dad: ", foo("mom", "dad"))    # True (121 -> 121)
+    print("cat ->", "dog: ", foo("cat", "dog"))      # True (123 -> 123)
+    print("mom ->", "dad: ", foo("mom", "dad"))      # True (121 -> 121)
     print("talk ->", "look: ", foo("talk", "look"))  # False (1234 -> 1223)
-    print("mmo ->", "dad: ", foo("mmo", "dad"))    # False (112 -> 121)
-    print("mama ->", "moo: ", foo("mama", "moo"))   # False (1212 -> 122)
+    print("mmo ->", "dad: ", foo("mmo", "dad"))      # False (112 -> 121)
+    print("mama ->", "moo: ", foo("mama", "moo"))    # False (1212 -> 122)
     print("===============================================")
     print("THE SOLUTION")
     print("===============================================")
