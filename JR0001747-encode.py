@@ -82,10 +82,10 @@ if __name__ == "__main__":
     print(isIsomorphic("mom", "dad"))    # True (121 -> 121)
     print(isIsomorphic("talk", "look"))  # False (1234 -> 1223)
     print(isIsomorphic("mmo", "dad"))    # False (112 -> 121)
-    print("===============================================")
-    print("Writing tests for the solution...")
-    print("===============================================")
-    assert isIsomorphic("cat", "dog") is True  # True (123 -> 123)
+
+    # Test cases for the isIsomorphic function prints True if the test passes
+    # This is how I would test the function in a real-world scenario
+    assert isIsomorphic("cat", "dog") is True
     assert isIsomorphic("mom", "dad") is True  # True (121 -> 121)
     assert isIsomorphic("talk", "look") is False  # False (1234 -> 1223)
     assert isIsomorphic("mmo", "dad") is False  # False (112 -> 121)
