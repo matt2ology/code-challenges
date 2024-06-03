@@ -73,17 +73,24 @@ if __name__ == "__main__":
     print("===============================================")
     print("MY ATTEMPT")
     print("===============================================")
-    print(foo("cat", "dog"))    # True (123 -> 123)
-    print(foo("mom", "dad"))    # True (121 -> 121)
-    print(foo("talk", "look"))  # False (1234 -> 1223)
-    print(foo("mmo", "dad"))    # False (112 -> 121)
+    print("cat ->", "dog: ", foo("cat", "dog"))    # True (123 -> 123)
+    print("mom ->", "dad: ", foo("mom", "dad"))    # True (121 -> 121)
+    print("talk ->", "look: ", foo("talk", "look"))  # False (1234 -> 1223)
+    print("mmo ->", "dad: ", foo("mmo", "dad"))    # False (112 -> 121)
+    print("mama ->", "moo: ", foo("mama", "moo"))   # False (1212 -> 122)
     print("===============================================")
     print("THE SOLUTION")
     print("===============================================")
-    print(isIsomorphic("cat", "dog"))    # True (123 -> 123)
-    print(isIsomorphic("mom", "dad"))    # True (121 -> 121)
-    print(isIsomorphic("talk", "look"))  # False (1234 -> 1223)
-    print(isIsomorphic("mmo", "dad"))    # False (112 -> 121)
+    # True (123 -> 123) Because c -> d, a -> o, t -> g (cat -> dog)
+    print("cat ->", "dog: ", isIsomorphic("cat", "dog"))
+    # True (121 -> 121) Because m -> d, o -> a (mom -> dad)
+    print("mom ->", "dad: ", isIsomorphic("mom", "dad"))
+    # False (1234 -> 1223) Because 'o' is mapped to 'o' and 'k'
+    print("talk ->", "look: ", isIsomorphic("talk", "look"))
+    # False (112 -> 121) Because 'm' is mapped to 'd' and 'a'
+    print("mmo ->", "dad: ", isIsomorphic("mmo", "dad"))
+    # False (1212 -> 122) Because 'm' is mapped to both 'm' and 'o'
+    print("mama ->", "moo: ", isIsomorphic("mama", "moo"))
 
     # Test cases for the isIsomorphic function prints True if the test passes
     # This is how I would test the function in a real-world scenario
